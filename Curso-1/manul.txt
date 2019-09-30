@@ -1,0 +1,3 @@
+Instalação do Ionic
+1 - intalar o nodejs do site nodejs.org
+2 - 
