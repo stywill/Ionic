@@ -1,0 +1,28 @@
+Instalação do Ionic
+Para esse projeto funcionar deve ser instalada a versão 6 do node
+1 - intalar o nodejs do site nodejs.org
+2 - intalar o ionic usando o comando npm install -g ionic cordova
+ npm install -g ionic@3.16.0 cordova@7.0.1 --save-exact
+
+Executar o ionic ionic serve --lab no caso do projeto do curso, esse comando vai pedir para
+instalar as dependencias. Basta digitar y e dar enter.
+
+Acessar a websevice do projeto dentro da pasta aluracar-webservice: npm start
+http://localhost:8080/api/carro/listaTodos
+
+Criando provider : no prompt ionic g provider carros.service
+
+Criar novas paginas: no prompt ionic g page NOME-DA-PAGINA.
+(Apartir do Ionic 3 não é mais feito dessa forma)
+Toda nova pagina deve ser declarada dentro do app/app.module.ts em declarations: 
+e quando pracisar navegar para ela em entryComponents:
+
+Navegação apartir do modules ou componente do tipo lasy.
+Quando a página é criada cria um arquino nome-pagina.modules.ts e esse arquivo será responsável por
+controlar a navegação.
+1- inserir no arquivo exports:[] para que qualquer outra parte da aplicação possa usar ele.
+2- no this.navCtrl.push() o componete deve ser uma string. Porém dessa forma caso tenha alguma alteração no 
+nome desse componente esse erro não será apontado.
+para corrigir isso basta pedir para o componente retornar o próprio nome Ex: EscolhaPage.name
+
+O decorator @IonicPage() também é necessário para o lasy navegator

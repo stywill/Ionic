@@ -3,6 +3,8 @@ Para esse projeto funcionar deve ser instalada a versão 6 do node
 1 - intalar o nodejs do site nodejs.org
 2 - intalar o ionic usando o comando npm install -g ionic cordova
  npm install -g ionic@3.16.0 cordova@7.0.1 --save-exact
+3 - criar novo projeto ionic: ionic start MinhaApp templete(blank, tabs,sidemenu)
+Ex: ionic start series blank
 
 Executar o ionic ionic serve --lab no caso do projeto do curso, esse comando vai pedir para
 instalar as dependencias. Basta digitar y e dar enter.
@@ -10,7 +12,15 @@ instalar as dependencias. Basta digitar y e dar enter.
 Acessar a websevice do projeto dentro da pasta aluracar-webservice: npm start
 http://localhost:8080/api/carro/listaTodos
 
+Variaveis: variaveis podem ser criadas da seguinte forma.
+Globais da classe recebem (public,privated ou protected)
+Dentro dos metodos recebem o "let"
+EX.: variavelNome:atribuição = atribitos ou valores
+Ainda é possivel usar o "#" para criar variaveis dentro do .html
+
 Criando provider : no prompt ionic g provider carros.service
+Providers são serviços utilidades criadas para desacoplar trechos de código que podem ser usados em outras classes 
+como no carro.service que recebe o endereço HTTP da api.
 
 Criar novas paginas: no prompt ionic g page NOME-DA-PAGINA.
 (Apartir do Ionic 3 não é mais feito dessa forma)
@@ -24,3 +34,26 @@ controlar a navegação.
 2- no this.navCtrl.push() o componete deve ser uma string. Porém dessa forma caso tenha alguma alteração no 
 nome desse componente esse erro não será apontado.
 para corrigir isso basta pedir para o componente retornar o próprio nome Ex: EscolhaPage.name
+
+ionViewDidLoad: Deve ser criado para homePage
+Criar as pastas utils->ionic->nav->nav-lifecycles.ts
+export interface NavLifecycles{
+    ionViewDidLoad?():void;
+}
+
+Navegação para home usando setRoot: Basta usar o setRoot e definir a HomePage
+Cuidado no import para não importar ../home/HomePage o correto é ../home/home
+
+Finally: para usar essa função é necessario importala no modulo principal app.module.ts 
+O finally é chamado sempre no final da execução do obiservable no caso o _agendamentosService. Resumindo, serve para 
+não repetir os codigos de sucesso ou erro desse metodo.
+
+Tipagem: Serve para o type checking e o alto complete assim os atributos seram escritos de forma correta.
+por padrão pode ser definido na pasta modelo ou qualquer outro nome.
+
+Configurar o Storage: dentro do arquivo do modulo principal app.module.ts adicionar ao inports IonicStorageModule e importar de '@ionic/storage'
+agora chamar o metodo forRoot
+.forRoot({
+      name:'aluracar',(nome do banco)
+      storeName:'agendamentos',(tabela)
+      driverOrder:['indexeddb'](array com todos os bancos que queremos trabalhar)
