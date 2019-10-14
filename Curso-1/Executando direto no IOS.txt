@@ -1,0 +1,9 @@
+As ferramentas de desenvolvimento da Apple estão todas no guarda-chuva do XCode. Então, precisamos instalá-lo. 
+Baixe o XCode na App Store, ou no seu site.
+
+Depois de baixá-lo, é importante executá-lo e aceitar o contrato, inclusive ele baixará as dependências que faltam. 
+Se você não fizer isso, não conseguirá realizar o build do seu projeto para IOS. No final, quando o Xcode for aberto, você pode fechá-lo.
+
+Outro ponto importante é que as versões mais atualizadas do Xcode só estão disponíveis para versões mais atualizadas 
+do sistema operacional da Apple. 
+Se você tiver um MAC muito antigo, que não aceita mais atualização, terá problemas pois o cordova depende de uma versão atualizada do XCode.

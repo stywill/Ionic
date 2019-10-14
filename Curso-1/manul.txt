@@ -57,3 +57,49 @@ agora chamar o metodo forRoot
       name:'aluracar',(nome do banco)
       storeName:'agendamentos',(tabela)
       driverOrder:['indexeddb'](array com todos os bancos que queremos trabalhar)
+
+Instalar plugins de funções nativas
+Para vibrar 
+ionic cordova plugin add cordova-plugin-vibration@2.1.6
+Instalar agora o pacote nativo do ionic o projeto usa a versão 4.5.2
+npm install --save @ionic-native/vibration
+Ao final deve a dependencia "Vibration" deve ser acresentada ao app.modules.ts na parte de providers.
+
+Instalar plugin de calendario
+ionic cordova plugin add cordova-plugin-datepicker@0.9
+Agora o pacote nativo 4.5.2
+npm install --save @ionic-native/date-picker
+
+E adicionar ao app.modules.ts da mesma forma que o vibrarion.
+Configurar foto.
+ionic cordova plugin add cordova-plugin-camera@2.4.1
+Depois 
+npm install --save @ionic-native/camera
+
+Configurando o OneSignal
+ionic cordova plugin add onesignal-cordova-plugin@2.2.5 --save
+Depois
+npm install --save @ionic-native/onesignal
+
+Fazendo build e gerar a apk.
+ ionic cordova platform add android
+ ionic cordova build android
+Ao final 
+
+Para executar a apk direto no telefone
+ ionic cordova run android
+
+Adicionar em app.module
+
+Configurar variaveis de ambiente
+Path: C:\Program Files\Android\gradle-5.6.2\bin
+ANDROID_HOME=C:\Users\Wilson Oliveira\AppData\Local\Android\Sdk
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_141
+
+Text:
+ionic info, cordova requirements
+ionic cordova requirements
+ c:/Ionic/Curso-1/aluracar/platforms/android/build/outputs/apk/android-debug.apk
+
+rodar o aplicativo com serve e console log para conseguirmos ver os dados do push que chegaram
+ionic cordova run android -l -s -c

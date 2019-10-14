@@ -1,0 +1,25 @@
+Vamos preparar o ambiente para suportar o desenvolvimento Android. Precisamos de:
+
+Java JDK
+Android Studio
+Java SDK
+Precisamos do Java para usar o Android Studio. Se você não tem certeza se possui o Java instalado, abra um terminal e rode o comando:
+javac -version
+
+Precisamos do Java na versão 1.8.x ou superior. Para instalá-lo, acesse: http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+
+Localize o pacote Java Platform JDK na versão 8 ou superior (não precisa baixar a versão com NetBeans). 
+Baixe e siga a instalação padrão com Next, Next e Finish.
+
+Ao final, abra um novo terminal e teste novamente:
+javac -version
+
+Android Studio
+Apesar de ser um projeto híbrido, o Cordova exige as ferramentas nativas instaladas para montar a app final e testá-la. 
+Por isso, vamos precisar do Android Studio, que funciona no Windows, Mac e Linux. É possível usar o Android SDK, no entanto, 
+o Android Studio já se encarregará de diversas coisas para você, principalmente evitando que tenha que configurar várias variáveis de ambiente.
+
+Baixe o Android Studio neste endereço https://developer.android.com/studio/index.html. Depois de baixá-lo, 
+independente da plataforma que utilizar, seja ela Windows, MAC ou Linux, você deve abrir o android studio depois de 
+concluir seu assistente para que ele configure seu ambiente para você e baixe as dependências necessárias. 
+Se não fizer isso, terá problemas no build da sua aplicação para Android.

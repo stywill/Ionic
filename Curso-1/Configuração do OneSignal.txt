@@ -1,0 +1,31 @@
+Passo 1 - Criando um conta no OneSignal
+O primeiro passo é acessar o site do OneSignal e, no canto superior direito, clicar em "log in". 
+No formulário que se abrirá haverá a opção de criar uma nova conta clicando na opção "sign up". 
+O processo, é o de praxe: informar email, senha, confirmar senha, informar nome de sua companhia/organização, aceitar os 
+termos de do serviço e clicar no botão de criar conta. Com isso, você terá acesso ao dashboard onde poderá criar suas 
+aplicações e as configurar!
+
+Passos Seguintes
+Para os próximos passos, de criação de uma aplicação no OneSignal, bem como toda burocracia de criação de chaves e 
+assinaturas para o Android e para o iOS e configuração no OneSignal. Para não "recriar a roda", lançarei mão de dois artigos! 
+O primeiro é em português e mostrará como fazer a configuração apenas para Android. Já o segundo é em inglês, 
+mas mostra como fazer a configuração tanto pra Android quanto para iOS. Ambos são bem explicados, mas não há 
+necessidade de seguir eles por completo! Apenas a parte de configuração do OneSignal.
+
+Passo Final
+Vocês, meus alunos, nesse momento, devem estar se perguntando: "Ok, segui todos os passos! Mas é só isso?" 
+E a resposta é um sonoro NÃO!! Os alunos mais atentos, irão perceber que nos dois artigos do passo anterior, os autores se 
+limitam a enviar notificações "na raça" através da própria interface do OneSignal. Isso é legal, pois dá pra ver a notificação 
+sendo entregue! Mas como alunos da Alura e do instrutor Gabriel Leite sempre vão além e fazem melhor, será isso que nós faremos!
+
+O que faremos é deixar o processo totalmente automatizado delegando à nossa API o papel de se comunicar com o OneSignal para efetuar a 
+entrega das notificações!
+
+No dashboard de aplicações do OneSignal, selecione a sua aplicação criada, em seguida, vá em "settings" e em "keys & ids", 
+da forma como é mostrado na imagem abaixo.
+
+BAIXE a nova versão da API que contempla o envio de notificações e, dentro da pasta aluracar-webservice, abra o arquivo api.js. 
+Na linha 70 desse arquivo, onde se lê APP-ID-ONESGINAL, substitua pelo valor do campo ONESIGNAL APP ID da imagem anterior. Por fim, na 
+linha 79, onde se encontra CODIGO-DE-AUTORIZACAO, substitua pelo valor do campo REST API KEY também contido na imagem anterior.
+
+Se tudo estiver correto, nossas notificações funcionarão automagicamente!
